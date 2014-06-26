@@ -40,10 +40,11 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
           </ul>
-	      <ul class="nav pull-right">
+	      <ul class="nav navbar-nav navbar-right">
 	      <li>
-	       <a class="navbar-brand"><?php echo "Login user : "; echo $_SERVER['REMOTE_USER'];  ?> </a>
+	       <a href="#"><?php echo "Login user: "; echo $_SERVER['REMOTE_USER'];  ?></a>
         </li>
+	      </ul>
 	      </div><!--/.nav-collapse -->
       </div>
     </div>

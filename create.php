@@ -1,8 +1,9 @@
 <?php
 session_start();
+$title =htmlspecialchars($_POST["title"]);
 
 // empty check
-if (!isset($_POST) || $_POST["title"] == "" || $_POST["title"] == " "){
+if (!isset($_POST) || $title == "" || $title == " "){
  $_SESSION["error"] = "空欄が存在します";
  $site = "./wlist.php";
  header("Location:$site");
@@ -10,7 +11,7 @@ if (!isset($_POST) || $_POST["title"] == "" || $_POST["title"] == " "){
 else{
 // insert action
 $_SESSION["error"] = "";
-$site = "./write.php?title=".$_POST["title"]."";
+$site = "./write.php?title=" . $title . "";
 header("Location:$site");
 mb_language("uni");
 mb_internal_encoding("utf-8");
@@ -19,7 +20,6 @@ mb_http_output("utf-8");
 
 if (!empty($_POST))
 {
- $title =htmlspecialchars($_POST["title"]);
 
  require_once(dirname(__FILE__) . "/configration.php"); 
  $link = mysql_connect( $db_url, $db_user, $db_pass );

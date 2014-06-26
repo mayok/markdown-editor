@@ -1,6 +1,6 @@
 <?php session_start();?>
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
  <head>
     <meta charset="utf-8">
     <meta name="description" content="">

@@ -19,7 +19,7 @@ mb_http_output("utf-8");
 
 if (!empty($_POST))
 {
- $title =$_POST["title"];
+ $title =htmlspecialchars($_POST["title"]);
 
  require_once(dirname(__FILE__) . "/configration.php"); 
  $link = mysql_connect( $db_url, $db_user, $db_pass );
